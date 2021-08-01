@@ -20,7 +20,7 @@ const Movie = (props) => {
     <div className="back-button">
       <Button label="Back" onClick={() => props.back()} />
     </div>
-    <div class="box">
+    <div className="box">
       <Card id="card" width="30em" background="light-1">
         <CardHeader>
           <Image

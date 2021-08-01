@@ -17,6 +17,12 @@ const App = () => {
     setSearch(searchTerm);
   }, []);
 
+  useEffect(() => {
+    if (!selectedMovieId && searchTerm.length > 0 && document.getElementById("search-input").value !== searchTerm) {
+      document.getElementById("search-input").value = searchTerm;
+    }
+  }, [selectedMovieId]);
+
   if (selectedMovieId) {
     return <Movie movieId={selectedMovieId} back={() => setSelectedMovieId(null)}/>;
   }
@@ -25,7 +31,7 @@ const App = () => {
     <MovieList index={index} movie={movie} setSelectedMovieId={setSelectedMovieId}/>
   ));
 
-  const handleSearch = (term) => {
+  const handleSearch = term => {
     setSearchTerm(term);
     setSearch(term);
   }
@@ -34,7 +40,7 @@ const App = () => {
     <div className="box-app">
         <div className="box-item">
           <Debounce time={500} handler='onChange'>
-            <TextInput reverse placeholder="Search..." onChange={text => handleSearch(text.target.value)} />
+            <TextInput id="search-input" reverse placeholder="Search..." onChange={text => handleSearch(text.target.value)}/>
           </Debounce>
         </div>
           {movies.length > 0 && (
