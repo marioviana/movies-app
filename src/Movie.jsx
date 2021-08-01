@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Button, Image, Card, CardHeader, CardBody, CardFooter } from "grommet";
+import { Button, Image, Card, CardHeader, CardBody, Spinner } from "grommet";
 
 import './Movie.css';
 import useMovie from './useMovie';
@@ -12,7 +12,7 @@ const Movie = (props) => {
   }, []);
 
   if (!movie) {
-    return <div>There was some problem loading the movie</div>
+    return <Spinner />
   }
 
   return (

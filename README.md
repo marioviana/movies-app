@@ -12,8 +12,6 @@ Some tests (like unit tests) could be made, by I skipped those due to lack of ti
 
 The UI is very simple, but it should be easy to improve and add some functionalities.
 
-Also, we could have loaders or placeholders when data is being fetched.
-
 Finally, regarding the API key, not secure for a production app, but it's present on the custom hooks hardcoded for this challenge.
 
 ## Installation
