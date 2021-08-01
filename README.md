@@ -8,11 +8,11 @@ To load more movies, I've used an infinite scroll in order to avoid having a but
 
 The requests are isolated from the UI components, using some custom hooks for that purpose.
 
-To be production ready, I would add some tests (such as unit tests) and improve the error handling (notifying the user with some sort of alert when an error occurs and deal with it gracefully).
+To be production ready, I would add some tests (such as unit tests) and improve the error handling (notifying the user with some sort of alert when an error occurs and deal with it gracefully), but I skipped those due lack of time.
 
 The UI is very simple, but it should be easy to improve and add some functionalities.
 
-Finally, regarding the API key, not secure for a production app, but it's present on the custom hooks hardcoded for this challenge.
+Finally, regarding the API key, not secure for a production app, but it's present on the custom hooks hardcoded for this challenge to be easier to run the app quicky.
 
 ## Installation
 
