@@ -1,0 +1,44 @@
+.box-app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.box-item {
+  width: 40%;
+}
+
+.movies {
+  display: flex;
+  height: 139px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.movies:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.movies-description {
+  max-height: 7em;
+  overflow: auto;
+  display: block;
+  max-width: 80%;
+  margin-left: 2%;
+}
+
+.movies-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.movies-image {
+  width: 92px;
+}
+
+.image {
+  width: 92px;
+}
