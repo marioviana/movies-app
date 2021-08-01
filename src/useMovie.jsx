@@ -6,7 +6,7 @@ const MOVIE_REQUEST = "movie/";
 const API_KEY = "acfd2849b5932f9fd4a059b4a871f532";
 
 const useMovie = () => {
-  const [movie, setMovie] = useState(null);
+  const [movie, setMovie] = useState(undefined);
 
   const setSelectedMovie = async (movieId) => {
     const requestMovieUrl = `${MOVIE_API}${MOVIE_REQUEST}${movieId}?api_key=${API_KEY}`;
@@ -15,6 +15,7 @@ const useMovie = () => {
       setMovie(movieResult.data);
     } catch (e) {
       console.log('Error while fetching single movie');
+      setMovie(null);
     }
   };
 

@@ -11,8 +11,19 @@ const Movie = (props) => {
     setSelectedMovie(props.movieId);
   }, []);
 
-  if (!movie) {
+  if (movie === undefined) {
     return <Spinner />
+  }
+
+  if (movie === null) {
+    return (
+      <>
+        <div className="back-button">
+          <Button label="Back" onClick={() => props.back()} />
+        </div>
+        <p style={{ textAlign: "center" }}>There was some problem while fetching this movie</p>
+      </>
+    )
   }
 
   return (

@@ -8,7 +8,7 @@ To load more movies, I've used an infinite scroll in order to avoid having a but
 
 The requests are isolated from the UI components, using some custom hooks for that purpose.
 
-Some tests (like unit tests) could be made, by I skipped those due to lack of time and a basic error handling.
+To be production ready, I would add some tests (such as unit tests) and improve the error handling (notifying the user with some sort of alert when an error occurs and deal with it gracefully).
 
 The UI is very simple, but it should be easy to improve and add some functionalities.
 
